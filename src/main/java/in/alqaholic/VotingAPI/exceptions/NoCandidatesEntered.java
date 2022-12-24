@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI.exceptions;
+package in.alqaholic.VotingAPI.exceptions;
 
 import org.springframework.http.HttpStatus;
 

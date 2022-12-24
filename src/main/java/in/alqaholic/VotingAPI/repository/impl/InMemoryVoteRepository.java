@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI.repository.impl;
+package in.alqaholic.VotingAPI.repository.impl;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import in.alqaholic.VoingAPI.repository.VoteRepository;
+import in.alqaholic.VotingAPI.repository.VoteRepository;
 
 @Repository
 public class InMemoryVoteRepository implements VoteRepository {

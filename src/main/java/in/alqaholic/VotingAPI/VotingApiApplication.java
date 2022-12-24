@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI;
+package in.alqaholic.VotingAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

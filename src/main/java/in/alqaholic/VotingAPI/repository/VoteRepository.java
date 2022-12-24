@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI.repository;
+package in.alqaholic.VotingAPI.repository;
 
 public interface VoteRepository {
     /**

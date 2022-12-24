@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI;
+package in.alqaholic.VotingAPI;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.never;
@@ -9,9 +9,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import in.alqaholic.VoingAPI.exceptions.CandidateAlreadyExists;
-import in.alqaholic.VoingAPI.repository.VoteRepository;
-import in.alqaholic.VoingAPI.services.VoteService;
+import in.alqaholic.VotingAPI.exceptions.CandidateAlreadyExists;
+import in.alqaholic.VotingAPI.repository.VoteRepository;
+import in.alqaholic.VotingAPI.services.VoteService;
 
 public class VotingServiceTests {
 

@@ -1,11 +1,11 @@
-package in.alqaholic.VoingAPI.controllers;
+package in.alqaholic.VotingAPI.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import in.alqaholic.VoingAPI.dto.VotingApiResponse;
-import in.alqaholic.VoingAPI.exceptions.ApiException;
+import in.alqaholic.VotingAPI.dto.VotingApiResponse;
+import in.alqaholic.VotingAPI.exceptions.ApiException;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {

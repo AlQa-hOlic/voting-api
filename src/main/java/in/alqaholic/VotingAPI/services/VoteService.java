@@ -1,10 +1,10 @@
-package in.alqaholic.VoingAPI.services;
+package in.alqaholic.VotingAPI.services;
 
 import org.springframework.stereotype.Service;
 
-import in.alqaholic.VoingAPI.exceptions.CandidateAlreadyExists;
-import in.alqaholic.VoingAPI.exceptions.NoCandidatesEntered;
-import in.alqaholic.VoingAPI.repository.VoteRepository;
+import in.alqaholic.VotingAPI.exceptions.CandidateAlreadyExists;
+import in.alqaholic.VotingAPI.exceptions.NoCandidatesEntered;
+import in.alqaholic.VotingAPI.repository.VoteRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service

@@ -1,4 +1,4 @@
-package in.alqaholic.VoingAPI.controllers;
+package in.alqaholic.VotingAPI.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.alqaholic.VoingAPI.dto.VotingApiResponse;
-import in.alqaholic.VoingAPI.services.VoteService;
+import in.alqaholic.VotingAPI.dto.VotingApiResponse;
+import in.alqaholic.VotingAPI.services.VoteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
