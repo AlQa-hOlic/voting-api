@@ -1,8 +1,11 @@
 package in.alqaholic.VotingAPI.services;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
 import in.alqaholic.VotingAPI.exceptions.CandidateAlreadyExists;
+import in.alqaholic.VotingAPI.exceptions.CandidateDoesNotExist;
 import in.alqaholic.VotingAPI.exceptions.NoCandidatesEntered;
 import in.alqaholic.VotingAPI.repository.VoteRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +31,22 @@ public class VoteService {
         } else {
             return "The winner is " + winner;
         }
+    }
+
+    public Map<String, Integer> getVoteList() {
+        return voteRepository.getVoteList();
+    }
+
+    public int getVotes(String name) {
+        if (!voteRepository.exists(name)) {
+            throw new CandidateDoesNotExist();
+        }
+
+        return voteRepository.getVotes(name);
+    }
+
+    public void castVote(String name) {
+        voteRepository.castVote(name);
     }
 
 }

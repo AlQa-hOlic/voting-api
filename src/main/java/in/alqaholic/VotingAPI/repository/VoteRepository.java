@@ -1,5 +1,7 @@
 package in.alqaholic.VotingAPI.repository;
 
+import java.util.Map;
+
 public interface VoteRepository {
     /**
      * Checks whether candidate exists in the votes data.
@@ -23,4 +25,10 @@ public interface VoteRepository {
      * 
      */
     String getWinner();
+
+    Map<String, Integer> getVoteList();
+
+    Integer getVotes(String name);
+
+    void castVote(String name);
 }

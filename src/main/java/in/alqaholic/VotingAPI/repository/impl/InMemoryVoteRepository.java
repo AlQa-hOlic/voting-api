@@ -1,5 +1,6 @@
 package in.alqaholic.VotingAPI.repository.impl;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,5 +29,25 @@ public class InMemoryVoteRepository implements VoteRepository {
                 .max(Comparator.comparing(Map.Entry::getValue))
                 .map(Map.Entry::getKey)
                 .orElse(null);
+    }
+
+    @Override
+    public Map<String, Integer> getVoteList() {
+        return Collections.unmodifiableMap(voteList);
+    }
+
+    @Override
+    public Integer getVotes(String name) {
+        return voteList.get(name);
+    }
+
+    @Override
+    public void castVote(String name) {
+        voteList.compute(name, (key, val) -> {
+            if (val == null)
+                return 0;
+
+            return val + 1;
+        });
     }
 }
