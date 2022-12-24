@@ -1,1 +1,11 @@
 Architecture
+
+The application is built with best practices in mind.
+
+The packages are structured into the following directories which have their own responsibilities:
+
+- controllers: REST API endpoints accessed by the consumers
+- dto: Data transfer pojos that are usually used to map data from/to the REST APIs
+- exceptions: Various application specific exceptions that are used to handle intentional exceptions gracefully
+- repository: Data layer of the application that handles information persistence
+- services: Classes used to encapsulate the business logic of the application
