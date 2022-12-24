@@ -1,5 +1,6 @@
 package in.alqaholic.VotingAPI;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import in.alqaholic.VotingAPI.exceptions.CandidateAlreadyExists;
+import in.alqaholic.VotingAPI.exceptions.NoCandidatesEntered;
 import in.alqaholic.VotingAPI.repository.VoteRepository;
 import in.alqaholic.VotingAPI.services.VoteService;
 
@@ -38,8 +40,20 @@ public class VotingServiceTests {
         String name = "test";
 
         when(voteRepository.exists(name)).thenReturn(true);
-        assertThrows(CandidateAlreadyExists.class, () -> voteService.enterCandidate(name),
-                "Candidate already exists");
+        assertThrows(CandidateAlreadyExists.class, () -> voteService.enterCandidate(name));
         verify(voteRepository, never()).enterCandidate(name);
+    }
+
+    @Test
+    void getWinner() {
+        String winnerName = "test";
+        when(voteRepository.getWinner()).thenReturn(winnerName);
+        assertEquals(voteService.getWinner(), "The winner is " + winnerName);
+    }
+
+    @Test
+    void noWinner() {
+        when(voteRepository.getWinner()).thenReturn(null);
+        assertThrows(NoCandidatesEntered.class, () -> voteService.getWinner());
     }
 }
